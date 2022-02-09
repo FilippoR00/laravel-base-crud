@@ -4,6 +4,9 @@
     
     
     <h1 class="my-3 text-center">Tabella Fumetti</h1>
+    <div class="text-center">
+        <a href="{{route("comics.create")}}"><button type="button" class="btn btn-success">Aggiungi fumetto</button></a>
+    </div>
     <table class="table my-4 border">
         <thead>
             <tr>
