@@ -30,7 +30,21 @@
                 <td>{{$comic->series}}</td>
                 <td>{{$comic->sale_date}}</td>
                 <td>{{$comic->type}}</td>
-                <td><a href="{{route("comics.show", $comic->id)}}"><button type="button" class="btn btn-primary">Apri</button></a></td>
+                <td>
+                    <div>
+                        <a href="{{route("comics.show", $comic->id)}}"><button type="button" class="btn btn-primary">Apri</button></a>
+                    </div>
+                    <div class="my-2">
+                        <a href="{{route("comics.edit", $comic->id)}}"><button type="button" class="btn btn-warning">Modifica</button></a>
+                    </div>
+                    <div>
+                        <form action="{{route("comics.destroy", $comic->id)}}" method="POST">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit" class="btn btn-danger">Elimina</button>
+                        </form>
+                    </div>
+                </td>
             </tr>
             @endforeach
         </tbody>
