@@ -38,16 +38,9 @@
                         <a href="{{route("comics.edit", $comic->id)}}"><button type="button" class="btn btn-warning">Modifica</button></a>
                     </div>
                     <div>
-                        {{-- <form action="{{route("comics.destroy", $comic->id)}}" method="POST">
-                            @csrf
-                            @method("DELETE")
-                            <button type="submit" class="btn btn-danger">Elimina</button>
-                        </form> --}}
-
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBox{{$comic->id}}">
                             Elimina
                         </button>
-
                         <div class="modal fade" id="deleteBox{{$comic->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteBoxLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
